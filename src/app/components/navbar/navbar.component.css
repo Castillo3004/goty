@@ -1,0 +1,24 @@
+
+
+.animate{
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.animate::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #02C1B3;
+  height: 2px;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
+}
+
+.animate:hover::after{
+  transform: translateX(-50%) scaleX(1);
+}
