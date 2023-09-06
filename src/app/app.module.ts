@@ -4,10 +4,14 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+
 import { AppComponent } from './app.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { GotyComponent } from './pages/goty/goty.component';
 import { ComponentsModule } from './components/components.module';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -24,6 +28,9 @@ import { ComponentsModule } from './components/components.module';
 
     ComponentsModule,
     HttpClientModule,
+
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

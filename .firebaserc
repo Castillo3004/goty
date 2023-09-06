@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firestore-grafica-angula-afd75": {
+      "hosting": {
+        "goty": [
+          "firestore-grafica-angula-afd75"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firestore-grafica-angula-afd75"
+  }
+}
